@@ -1115,10 +1115,10 @@ upgradeCheck:
   dnsConfig: {}
 
 ## Settings for the Let's Encrypt ACME Issuer
-# certmanager-issuer:
+certmanager-issuer:ingress:
 #   # The email address to register certificates requested from Let's Encrypt.
 #   # Required if using Let's Encrypt.
-#   email: email@example.com
+   email: admin@rib.local
 
 
 ## Installation of certmananger.
@@ -1417,8 +1417,8 @@ prometheus:
 ## Installation & configuration charts/registry
 ## https://docs.gitlab.com/charts/architecture/decisions#registry
 ## https://docs.gitlab.com/charts/charts/registry/
-# registry:
-#   enabled: false
+registry:
+   enabled: false
 
 ## Automatic shared secret generation
 ## https://docs.gitlab.com/charts/installation/secrets
