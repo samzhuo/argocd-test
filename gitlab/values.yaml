@@ -1115,16 +1115,17 @@ upgradeCheck:
   dnsConfig: {}
 
 ## Settings for the Let's Encrypt ACME Issuer
-certmanager-issuer:ingress:
+certmanager-issuer:
 #   # The email address to register certificates requested from Let's Encrypt.
 #   # Required if using Let's Encrypt.
    email: admin@rib.local
+   enabled: false
 
 
 ## Installation of certmananger.
 ## This value replaces `certmanager.install` to allow certmanager schema validation to pass.
 ## See dependencies in Chart.yaml for current version
-installCertmanager: true
+installCertmanager: false
 
 ## Configuration of jetstack/cert-manager
 certmanager:
