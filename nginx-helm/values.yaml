@@ -163,18 +163,15 @@ affinity: {}
 # Added by Sam
 persistence:
   enabled: true
-
   storageClass: local-path
-
   accessMode: ReadWriteOnce
-
   size: 1Gi
-
-  volumes:
-  - name: nginx-storage
-    persistentVolumeClaim:
-      claimName: nginx-helm-pvc
 
 volumeMounts:
   - name: nginx-storage
     mountPath: /usr/share/nginx/html
+
+volumes:
+  - name: nginx-storage
+    persistentVolumeClaim:
+      claimName: nginx-helm-pvc
