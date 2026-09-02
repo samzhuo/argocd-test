@@ -169,7 +169,7 @@ persistence:
 
 volumeMounts:
   - name: nginx-storage
-    mountPath: /usr/share/nginx/html
+    mountPath: /data
 
 volumes:
   - name: nginx-storage
