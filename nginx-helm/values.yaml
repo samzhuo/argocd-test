@@ -159,3 +159,13 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# Added by Sam
+persistence:
+  enabled: true
+
+  storageClass: local-path
+
+  accessMode: ReadWriteOnce
+
+  size: 1Gi
