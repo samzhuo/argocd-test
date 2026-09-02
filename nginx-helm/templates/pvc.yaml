@@ -3,7 +3,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ include "nginx-helm.fullname" . }}-pvc
+  name: nginx-helm-pvc
 
 spec:
   accessModes:
