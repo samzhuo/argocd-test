@@ -5,13 +5,16 @@ metadata:
   name: grafana-probe
   namespace: monitoring
 
+  labels:
+    release: prometheus-stack
+
 spec:
   interval: 30s
 
   module: http_2xx
 
   prober:
-    url: blackbox-exporter-prometheus-blackbox-exporter:9115
+    url: blackbox-exporter-prometheus-blackbox-exporter.monitoring.svc.cluster.local:9115
 
   targets:
     staticConfig:
