@@ -4,6 +4,16 @@ grafana:
     storageClassName: local-path
     size: 5Gi
 
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+
+    hosts:
+      - grafana.lab.local
+
+    path: /
+    pathType: Prefix
+
 prometheus:
   prometheusSpec:
     storageSpec:
