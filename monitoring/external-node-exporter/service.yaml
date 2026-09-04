@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: node-exporter-external
+  name: exporter-external
   namespace: monitoring
   labels:
-    app: external-node-exporter
+    app: node-exporter
 spec:
   ports:
     - name: metrics

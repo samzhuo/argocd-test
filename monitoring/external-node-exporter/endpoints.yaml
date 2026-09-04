@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Endpoints
 metadata:
-  name: node-exporter-external
+  name: exporter-external
   namespace: monitoring
 subsets:
   - addresses:
