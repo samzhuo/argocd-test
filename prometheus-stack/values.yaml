@@ -37,6 +37,17 @@ prometheus:
               storage: 20Gi
 
 alertmanager:
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+
+    hosts:
+      - alertmanager.lab.local
+
+    paths:
+      - /
+    pathType: Prefix
+
   alertmanagerSpec:
     storage:
       volumeClaimTemplate:
